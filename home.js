@@ -100,7 +100,6 @@ function resetButtons() {
 }
 
 // Add money
-
 const addMoney = document.getElementById("add-money");
 addMoney.addEventListener("click", function (event) {
     event.preventDefault();
@@ -131,7 +130,6 @@ addMoney.addEventListener("click", function (event) {
 });
 
 // cashout
-
 const cashout = document.getElementById("cashout");
 cashout.addEventListener("click", function (event) {
     event.preventDefault();
@@ -161,9 +159,56 @@ cashout.addEventListener("click", function (event) {
 });
 
 // transfer money
+const transfer = document.getElementById("transfer");
+transfer.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const accountNumber = document.getElementById("transfer-number").value;
+    const amount = parseInt(document.getElementById("transfer-amount").value);
+    const pin = parseInt(document.getElementById("transfer-pin").value);
+    const availableBalance = parseInt(document.getElementById("balance-amount").innerText);
+
+    if(accountNumber=="" || amount=="" || pin=="") {
+        alert("Please fill all the fields");
+        return;
+    }
+
+    if(amount>10000) {
+        alert("You can transfer maximum 10000 tk at a time");
+        return;
+    }
+
+    if(pin!=2222) {
+        alert("Incorrect pin");
+        return;
+    }
+
+    document.getElementById("balance-amount").innerText = availableBalance - amount;
+    alert("Money transferred successfully");
+});
 
 // get bonus
+const getBonus = document.getElementById("get-bonus");
+getBonus.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const referralCode = document.getElementById("cupon-code").value;
+    const availableBalance = parseInt(document.getElementById("balance-amount").innerText);
+
+    if(referralCode=="") {
+        alert("Please fill all the fields");
+        return;
+    }
+    if(referralCode.length!=6 ) {
+        alert("Incorrect cupon code");
+        return;
+    }
+
+    document.getElementById("balance-amount").innerText = availableBalance + 6000;
+    alert("Bonus received successfully");
+});
 
 // pay bill
+
 
 // transactions
