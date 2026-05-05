@@ -23,6 +23,54 @@ document.getElementById("quick-access-cashout-btn").addEventListener("click", fu
     document.getElementById("transactions-section").classList.add("hidden");
 });
 
+document.getElementById("quick-access-transfer-money-btn").addEventListener("click", function () {
+    resetButtons();
+    document.getElementById("quick-access-transfer-money-btn").style.backgroundColor = "#eaf4ffff";
+    document.getElementById("quick-access-transfer-money-btn").style.border = "2px solid #0874f2";
+    document.getElementById("add-money-section").classList.add("hidden");
+    document.getElementById("cashout-section").classList.add("hidden");
+    document.getElementById("transfer-section").classList.remove("hidden");
+    document.getElementById("get-bonus-section").classList.add("hidden");
+    document.getElementById("pay-bill-section").classList.add("hidden");
+    document.getElementById("transactions-section").classList.add("hidden");
+});
+
+document.getElementById("quick-access-get-bonus-btn").addEventListener("click", function () {
+    resetButtons();
+    document.getElementById("quick-access-get-bonus-btn").style.backgroundColor = "#eaf4ffff";
+    document.getElementById("quick-access-get-bonus-btn").style.border = "2px solid #0874f2";
+    document.getElementById("add-money-section").classList.add("hidden");
+    document.getElementById("cashout-section").classList.add("hidden");
+    document.getElementById("transfer-section").classList.add("hidden");
+    document.getElementById("get-bonus-section").classList.remove("hidden");
+    document.getElementById("pay-bill-section").classList.add("hidden");
+    document.getElementById("transactions-section").classList.add("hidden");
+});
+
+document.getElementById("quick-access-pay-bill-btn").addEventListener("click", function () {
+    resetButtons();
+    document.getElementById("quick-access-pay-bill-btn").style.backgroundColor = "#eaf4ffff";
+    document.getElementById("quick-access-pay-bill-btn").style.border = "2px solid #0874f2";
+    document.getElementById("add-money-section").classList.add("hidden");
+    document.getElementById("cashout-section").classList.add("hidden");
+    document.getElementById("transfer-section").classList.add("hidden");
+    document.getElementById("get-bonus-section").classList.add("hidden");
+    document.getElementById("pay-bill-section").classList.remove("hidden");
+    document.getElementById("transactions-section").classList.add("hidden");
+});
+
+document.getElementById("quick-access-transactions-btn").addEventListener("click", function () {
+    resetButtons();
+    document.getElementById("quick-access-transactions-btn").style.backgroundColor = "#eaf4ffff";
+    document.getElementById("quick-access-transactions-btn").style.border = "2px solid #0874f2";
+    document.getElementById("add-money-section").classList.add("hidden");
+    document.getElementById("cashout-section").classList.add("hidden");
+    document.getElementById("transfer-section").classList.add("hidden");
+    document.getElementById("get-bonus-section").classList.add("hidden");
+    document.getElementById("pay-bill-section").classList.add("hidden");
+    document.getElementById("transactions-section").classList.remove("hidden");
+});
+
 // reset style for toggle
 const addBtn = document.getElementById("quick-access-add-money-btn");
 const cashoutBtn = document.getElementById("quick-access-cashout-btn");

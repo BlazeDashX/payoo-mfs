@@ -192,8 +192,180 @@
         </form>
       </div>
 
+      <!-- Transfer Section -->
+      <div class="transfer-section" id="transfer-section">
+        <h1 class="font-bold mb-3">Transfer Money</h1>
+        <form action="" class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <div>
+            <label for="" class="font-semibold">Recipient Number</label>
+            <br />
+            <input
+              type="text"
+              id="transfer-number"
+              placeholder="Enter 11-digit recipient number"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Amount to Transfer</label>
+            <br />
+            <input
+              type="text"
+              id="transfer-amount"
+              placeholder="Enter amount to transfer"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="password"
+              id="transfer-pin"
+              placeholder="Enter 4 digit pin"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <button
+            class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2"
+            id="transfer"
+          >
+            Transfer Money
+          </button>
+        </form>
+      </div>
 
-      
+      <!-- Get Bonus Section -->
+      <div class="get-bonus-section hidden" id="get-bonus-section">
+        <h1 class="font-bold mb-3">Get Bonus</h1>
+        <form action="" class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <div>
+            <label for="" class="font-semibold">Referral Code</label>
+            <br />
+            <input
+              type="text"
+              id="referral-code"
+              placeholder="Enter 6-digit referral code"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Amount to Get</label>
+            <br />
+            <input
+              type="text"
+              id="get-bonus-amount"
+              placeholder="Enter amount to get bonus"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="password"
+              id="get-bonus-pin"
+              placeholder="Enter 4 digit pin"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <button
+            class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2"
+            id="get-bonus"
+          >
+            Get Bonus
+          </button>
+        </form>
+      </div>
+
+      <!-- Pay Bill Section -->
+      <div class="pay-bill-section hidden" id="pay-bill-section">
+        <h1 class="font-bold mb-3">Pay Bill</h1>
+        <form action="" class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <div>
+            <label for="" class="font-semibold">Bill Type</label>
+            <br />
+            <select
+              id="bill-type"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            >
+              <option value="" selected disabled>Select a bill type</option>
+              <option value="electricity">Electricity</option>
+              <option value="gas">Gas</option>
+              <option value="water">Water</option>
+              <option value="internet">Internet</option>
+            </select>
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Bill Number</label>
+            <br />
+            <input
+              type="text"
+              id="bill-number"
+              placeholder="Enter bill number"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Amount to Pay</label>
+            <br />
+            <input
+              type="text"
+              id="pay-bill-amount"
+              placeholder="Enter amount to pay"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="password"
+              id="pay-bill-pin"
+              placeholder="Enter 4 digit pin"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <button
+            class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2"
+            id="pay-bill"
+          >
+            Pay Bill
+          </button>
+        </form>
+      </div>
+
+      <!-- Transactions Section -->
+      <div class="transactions-section hidden" id="transactions-section">
+        <h1 class="font-bold mb-3">Recent Transactions</h1>
+        <div class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <ul class="list-disc">
+            <li>
+              <span class="font-semibold">Add Money:</span>
+              <span id="transaction-add-money"></span>
+            </li>
+            <li>
+              <span class="font-semibold">Cashout:</span>
+              <span id="transaction-cashout"></span>
+            </li>
+            <li>
+              <span class="font-semibold">Transfer Money:</span>
+              <span id="transaction-transfer-money"></span>
+            </li>
+            <li>
+              <span class="font-semibold">Get Bonus:</span>
+              <span id="transaction-get-bonus"></span>
+            </li>
+            <li>
+              <span class="font-semibold">Pay Bill:</span>
+              <span id="transaction-pay-bill"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
     </div>
 
     <script src="./home.js"></script>
