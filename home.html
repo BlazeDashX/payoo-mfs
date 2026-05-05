@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#f4f5f7] h-[110vh] flex flex-col items-center">
+  <body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center">
     <div class="max-w-lg p-5 bg-white rounded-b-xl">
       <div
         class="flex justify-between items-center px-5 pb-3 border-b border-slate-300"
@@ -26,7 +26,9 @@
         <div class="left flex items-center gap-2">
           <img src="./assets/Group.png" alt="" class="w-[50px]" />
           <div class="">
-            <h1 class="font-bold text-lg">$45000</h1>
+            <h1 class="font-bold text-lg">
+              $<span id="balance-amount">45000</span>
+            </h1>
             <p class="text-sm text-slate-500">Available Balance</p>
           </div>
         </div>
@@ -46,37 +48,43 @@
       </div>
       <div class="quick-access grid grid-cols-3 gap-3">
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-add-money-btn"
         >
           <img src="./assets/wallet1.png" alt="" />
           <p class="text-sm">Add Money</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-cashout-btn"
         >
           <img src="./assets/send1.png" alt="" />
           <p class="text-sm">Cashout</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-transfer-money-btn"
         >
           <img src="./assets/money1.png" alt="" />
           <p class="text-sm">Transfer Money</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-get-bonus-btn"
         >
           <img src="./assets/bonus1.png" alt="" />
           <p class="text-sm">Get Bonus</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-pay-bill-btn"
         >
           <img src="./assets/purse1.png" alt="" />
           <p class="text-sm">Pay Bill</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white cursor-pointer hover:bg-blue-50 transition-colors"
+          id="quick-access-transactions-btn"
         >
           <img src="./assets/transaction1.png" alt="" />
           <p class="text-sm">Transactions</p>
@@ -85,23 +93,26 @@
     </div>
     <div class="all-form-sections max-w-lg mx-auto p-3">
       <!-- ADD MONEY FORM -->
-      <div class="add-money">
+      <div class="add-money-section hidden" id="add-money-section">
         <h1 class="font-bold mb-3">Add Money</h1>
-        <form action="" class=" mx-auto w-[400px] p-8 bg-white rounded-3xl">
-           <div>
+        <form action="" class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <div>
             <label for="number" class="font-semibold">Select A Bank</label>
             <br />
-            <select id="bank-select" class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full">
-                <option value="" selected disabled>Select A Bank</option>
-                <option value="DBBL">DBBL</option>
-                <option value="City Bank">City Bank</option>
-                <option value="HSBC Bank">HSBC Bank</option>
-                <option value="Islami Bank">Islami Bank</option>
+            <select
+              id="bank-select"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            >
+              <option value="" selected disabled>Select A Bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="City Bank">City Bank</option>
+              <option value="HSBC Bank">HSBC Bank</option>
+              <option value="Islami Bank">Islami Bank</option>
             </select>
-          </div> 
+          </div>
           <div class="mt-5">
             <label for="" class="font-semibold">Bank Account Number</label>
-            <br/>
+            <br />
             <input
               type="text"
               id="bank-acc-number"
@@ -119,14 +130,69 @@
               class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
             />
           </div>
-            <div class="mt-5">
-                <label for="" class="font-semibold ">Pin Number</label>
-                <br>
-                <input type="password" id="pin" placeholder="Enter 4 digit pin" class="input border-none bg-[#f4f5f7] rounded-3xl mt-3">
-            </div>
-            <button class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2" id="addMoneyBtn">Add Money</button>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="password"
+              id="add-pin"
+              placeholder="Enter 4 digit pin"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <button
+            class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2"
+            id="add-money"
+          >
+            Add Money
+          </button>
+        </form>
+      </div>
+
+      <!-- Cashout Section -->
+      <div class="cashout-section" id="cashout-section">
+        <h1 class="font-bold mb-3">Cash Out</h1>
+        <form action="" class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
+          <div>
+            <label for="" class="font-semibold">Agent Number</label>
+            <br />
+            <input
+              type="text"
+              id="agent-number"
+              placeholder="Enter 11-digit agent number"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Amount to Add</label>
+            <br />
+            <input
+              type="text"
+              id="add-amount"
+              placeholder="Enter amount to add"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="password"
+              id="cashout-pin"
+              placeholder="Enter 4 digit pin"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+          <button
+            class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2"
+            id="add-money"
+          >
+            Add Money
+          </button>
         </form>
       </div>
     </div>
+
+    <script src="./home.js"></script>
   </body>
 </html>
