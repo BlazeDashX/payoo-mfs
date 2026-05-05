@@ -18,9 +18,11 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center">
-    <div class="w-[484px] p-5 bg-white rounded-b-3xl">
-      <div class="flex justify-between items-center p-5 border-b border-slate-300">
+  <body class="bg-[#f4f5f7] h-[110vh] flex flex-col items-center">
+    <div class="max-w-lg p-5 bg-white rounded-b-xl">
+      <div
+        class="flex justify-between items-center px-5 pb-3 border-b border-slate-300"
+      >
         <div class="left flex items-center gap-2">
           <img src="./assets/Group.png" alt="" class="w-[50px]" />
           <div class="">
@@ -29,13 +31,13 @@
           </div>
         </div>
         <div class="right">
-          <button class="btn text-sm text-slate-500 rounded-lg" id="logoutBtn">
+          <button class="btn text-sm rounded-lg" id="logoutBtn">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
             Log Out
           </button>
         </div>
       </div>
-      <div class="py-5">
+      <div class="py-3">
         <h1 class="font-bold text-xl">🔥 Welcome to Payooo!</h1>
         <p class="text-slate-500 mt-2">
           Enjoy easy and convenient financial services with us. <br />
@@ -44,41 +46,86 @@
       </div>
       <div class="quick-access grid grid-cols-3 gap-3">
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/wallet1.png" alt="" />
           <p class="text-sm">Add Money</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/send1.png" alt="" />
           <p class="text-sm">Cashout</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/money1.png" alt="" />
           <p class="text-sm">Transfer Money</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/bonus1.png" alt="" />
           <p class="text-sm">Get Bonus</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/purse1.png" alt="" />
           <p class="text-sm">Pay Bill</p>
         </button>
         <button
-          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-3 bg-white"
         >
           <img src="./assets/transaction1.png" alt="" />
           <p class="text-sm">Transactions</p>
         </button>
+      </div>
+    </div>
+    <div class="all-form-sections max-w-lg mx-auto p-3">
+      <!-- ADD MONEY FORM -->
+      <div class="add-money">
+        <h1 class="font-bold mb-3">Add Money</h1>
+        <form action="" class=" mx-auto w-[400px] p-8 bg-white rounded-3xl">
+           <div>
+            <label for="number" class="font-semibold">Select A Bank</label>
+            <br />
+            <select id="bank-select" class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full">
+                <option value="" selected disabled>Select A Bank</option>
+                <option value="DBBL">DBBL</option>
+                <option value="City Bank">City Bank</option>
+                <option value="HSBC Bank">HSBC Bank</option>
+                <option value="Islami Bank">Islami Bank</option>
+            </select>
+          </div> 
+          <div class="mt-5">
+            <label for="" class="font-semibold">Bank Account Number</label>
+            <br/>
+            <input
+              type="text"
+              id="bank-acc-number"
+              placeholder="Enter 11-digit account number"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3 w-full"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="" class="font-semibold">Amount to Add</label>
+            <br />
+            <input
+              type="text"
+              id="add-amount"
+              placeholder="Enter amount to add"
+              class="input border-none bg-[#f4f5f7] rounded-3xl mt-3"
+            />
+          </div>
+            <div class="mt-5">
+                <label for="" class="font-semibold ">Pin Number</label>
+                <br>
+                <input type="password" id="pin" placeholder="Enter 4 digit pin" class="input border-none bg-[#f4f5f7] rounded-3xl mt-3">
+            </div>
+            <button class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5 p-2" id="addMoneyBtn">Add Money</button>
+        </form>
       </div>
     </div>
   </body>
