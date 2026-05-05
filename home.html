@@ -1,13 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to Payoo</h1>
-    <p>This is your dashboard</p>
-    <button class="btn bg-[#0874f2] text-white w-full rounded-3xl mt-5" id="logoutBtn">Logout</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center">
+    <div class="w-[484px] p-5 bg-white rounded-b-3xl">
+      <div class="flex justify-between items-center p-5 border-b border-slate-300">
+        <div class="left flex items-center gap-2">
+          <img src="./assets/Group.png" alt="" class="w-[50px]" />
+          <div class="">
+            <h1 class="font-bold text-lg">$45000</h1>
+            <p class="text-sm text-slate-500">Available Balance</p>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn text-sm text-slate-500 rounded-lg" id="logoutBtn">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            Log Out
+          </button>
+        </div>
+      </div>
+      <div class="py-5">
+        <h1 class="font-bold text-xl">🔥 Welcome to Payooo!</h1>
+        <p class="text-slate-500 mt-2">
+          Enjoy easy and convenient financial services with us. <br />
+          Cashout charge is low and
+        </p>
+      </div>
+      <div class="quick-access grid grid-cols-3 gap-3">
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/wallet1.png" alt="" />
+          <p class="text-sm">Add Money</p>
+        </button>
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/send1.png" alt="" />
+          <p class="text-sm">Cashout</p>
+        </button>
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/money1.png" alt="" />
+          <p class="text-sm">Transfer Money</p>
+        </button>
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/bonus1.png" alt="" />
+          <p class="text-sm">Get Bonus</p>
+        </button>
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/purse1.png" alt="" />
+          <p class="text-sm">Pay Bill</p>
+        </button>
+        <button
+          class="flex flex-col items-center justify-center gap-2 border border-slate-200 rounded-xl p-5 bg-white"
+        >
+          <img src="./assets/transaction1.png" alt="" />
+          <p class="text-sm">Transactions</p>
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
