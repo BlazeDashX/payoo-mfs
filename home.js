@@ -1,4 +1,10 @@
-// toggle feature
+// logout
+document.getElementById("logoutBtn").addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
+
+// toggle button styling
 document.getElementById("quick-access-add-money-btn").addEventListener("click", function () {
     resetButtons();
     document.getElementById("quick-access-add-money-btn").style.backgroundColor = "#eaf4ffff";
@@ -209,6 +215,31 @@ getBonus.addEventListener("click", function (event) {
 });
 
 // pay bill
+const payBill = document.getElementById("pay-bill");
+payBill.addEventListener("click", function (event) {
+    event.preventDefault();
 
+    const billType = document.getElementById("bill-type").value;
+    const billNumber = document.getElementById("bill-number").value;
+    const amount = parseInt(document.getElementById("pay-bill-amount").value);
+    const pin = parseInt(document.getElementById("pay-bill-pin").value);
+    const availableBalance = parseInt(document.getElementById("balance-amount").innerText);
 
-// transactions
+    if(billType=="" || billNumber=="" || amount=="" || pin=="") {
+        alert("Please fill all the fields");
+        return;
+    }
+
+    if(amount<100) {
+        alert("Please enter at least 100 tk");
+        return;
+    }
+
+    if(pin!=2222) {
+        alert("Incorrect pin");
+        return;
+    }
+
+    document.getElementById("balance-amount").innerText = availableBalance - amount;
+    alert("Bill paid successfully");
+});

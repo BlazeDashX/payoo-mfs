@@ -318,34 +318,67 @@
 
       <!-- Transactions Section -->
       <div class="transactions-section hidden" id="transactions-section">
-        <h1 class="font-bold mb-3">Recent Transactions</h1>
-        <div class="mx-auto w-[400px] p-8 bg-white rounded-3xl">
-          <ul class="list-disc">
-            <li>
-              <span class="font-semibold">Add Money:</span>
-              <span id="transaction-add-money"></span>
+        <div class="flex items-center justify-between">
+            <h1 class="font-bold mb-3">Recent Transactions</h1>
+            <button class="text-sm text-slate-500 font-semibold" id="view-all-transactions">View All</button>
+        </div>
+        <div class="mx-auto w-[400px] ">
+          <ul class="space-y-3">
+            <li class="bg-white rounded-3xl p-5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <img src="./assets/wallet1.png" alt="" class="p-3 bg-slate-200 rounded-full">
+                        <div>
+                            <h1 class="font-semibold">Add Money</h1>
+                            <p class="text-slate-500">Today 11:18:29pm</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-slate-500 font-semibold" id="add-money-transaction">
+                        <i class="fas fa-ellipsis-v"></i></button>
+                </div>
             </li>
-            <li>
-              <span class="font-semibold">Cashout:</span>
-              <span id="transaction-cashout"></span>
+            <li class="bg-white rounded-3xl p-5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <img src="./assets/wallet1.png" alt="" class="p-3 bg-slate-200 rounded-full">
+                        <div>
+                            <h1 class="font-semibold">Bank Deposit</h1>
+                            <p class="text-slate-500">Today 10:50:42pm</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-slate-500 font-semibold" id="bank-deposit-transaction">
+                        <i class="fas fa-ellipsis-v"></i></button>
+                </div>
             </li>
-            <li>
-              <span class="font-semibold">Transfer Money:</span>
-              <span id="transaction-transfer-money"></span>
+                        <li class="bg-white rounded-3xl p-5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <img src="./assets/wallet1.png" alt="" class="p-3 bg-slate-200 rounded-full">
+                        <div>
+                            <h1 class="font-semibold">Mobile Recharge</h1>
+                            <p class="text-slate-500">Today 09:18:29pm</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-slate-500 font-semibold" id="mobile-recharge-transaction">
+                        <i class="fas fa-ellipsis-v"></i></button>
+                </div>
             </li>
-            <li>
-              <span class="font-semibold">Get Bonus:</span>
-              <span id="transaction-get-bonus"></span>
-            </li>
-            <li>
-              <span class="font-semibold">Pay Bill:</span>
-              <span id="transaction-pay-bill"></span>
+                        <li class="bg-white rounded-3xl p-5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <img src="./assets/wallet1.png" alt="" class="p-3 bg-slate-200 rounded-full">
+                        <div>
+                            <h1 class="font-semibold">Gas Bill</h1>
+                            <p class="text-slate-500">Today 6:23:23pm</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-slate-500 font-semibold" id="gas-bill-transaction">
+                        <i class="fas fa-ellipsis-v"></i></button>
+                </div>
             </li>
           </ul>
         </div>
       </div>
-
-
 
     </div>
 
