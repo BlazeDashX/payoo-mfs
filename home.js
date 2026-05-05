@@ -84,6 +84,34 @@ addMoney.addEventListener("click", function (event) {
 
 // cashout
 
+const cashout = document.getElementById("cashout");
+cashout.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const accountNumber = document.getElementById("cashout-acc-number").value;
+    const amount = parseInt(document.getElementById("cashout-amount").value);
+    const pin = parseInt(document.getElementById("cashout-pin").value);
+    const availableBalance = parseInt(document.getElementById("balance-amount").innerText);
+
+    if(accountNumber=="" || amount=="" || pin=="") {
+        alert("Please fill all the fields");
+        return;
+    }
+
+    if(amount>10000) {
+        alert("You can cashout maximum 10000 tk at a time");
+        return;
+    }
+
+    if(pin!=2222) {
+        alert("Incorrect pin");
+        return;
+    }
+
+    document.getElementById("balance-amount").innerText = availableBalance - amount;
+    alert("Money cashouted successfully");
+});
+
 // transfer money
 
 // get bonus
